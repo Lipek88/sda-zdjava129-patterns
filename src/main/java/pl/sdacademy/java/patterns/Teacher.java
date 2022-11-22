@@ -2,15 +2,10 @@ package pl.sdacademy.java.patterns;
 
 import java.util.Set;
 
-class Teacher implements HasPerson {
-
-   private Person person;
+class Teacher {
    private Set<String> subjectCodes;
 
-   @Override
-   public Person getPerson() {
-      return person;
-   }
+   private Employee employee;
 
    public Set<String> getSubjectCodes() {
       return subjectCodes;
