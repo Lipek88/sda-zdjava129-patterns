@@ -7,6 +7,10 @@ class Teacher implements HasPerson {
    private Person person;
    private Set<String> subjectCodes;
 
+   public Teacher(Set<String> subjectCodes) {
+      this.subjectCodes = subjectCodes;
+   }
+
    @Override
    public Person getPerson() {
       return person;
@@ -14,5 +18,9 @@ class Teacher implements HasPerson {
 
    public Set<String> getSubjectCodes() {
       return subjectCodes;
+   }
+
+   public static TeacherBuilder builder(){
+      return new TeacherBuilder();
    }
 }
